@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python",
+  "python.analysis.extraPaths": ["${workspaceFolder}/backend/src"],
+  "pylint.interpreter": ["${workspaceFolder}/backend/.venv/bin/python"],
+  "pylint.cwd": "${workspaceFolder}/backend",
+  "pylint.args": ["--init-hook=import sys; sys.path.insert(0, 'src')"],
+  "pylint.importStrategy": "fromEnvironment"
+}

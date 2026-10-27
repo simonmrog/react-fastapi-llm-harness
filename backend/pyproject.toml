@@ -1,0 +1,36 @@
+[project]
+name = "harness"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "simonmrog", email = "simonmrog@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.3.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+harness = "harness.main:run_autonomous_agent"
+
+[build-system]
+requires = ["uv_build>=0.12.24,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pylint>=4.1.3",
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint."messages control"]
+disable = [
+    "broad-exception-caught",   # W0718
+    "missing-module-docstring", # C0114
+    "missing-class-docstring",  # C0115
+    "missing-function-docstring", # C0116
+]
